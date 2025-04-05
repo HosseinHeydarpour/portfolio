@@ -1,11 +1,15 @@
 <nav
   class="bg-black-800 d-flex justify-content-between align-items-center navigation bg-black-800"
 >
-  <div class="logo navigation__logo bg-primary">
+  <div class="logo navigation__logo bg-primary-dark-100">
     <span>HH</span>
   </div>
 
-  <div class="d-lg-none navigation__btn--mobile">
+  <div
+    class="d-lg-none navigation__btn--mobile"
+    (click)="onMobileMenuBtnClicked()"
+    [class.active]="isMobileMenuActive()"
+  >
     <span></span>
   </div>
 </nav>

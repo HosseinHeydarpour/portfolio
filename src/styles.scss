@@ -46,14 +46,12 @@
 }
 
 html {
-  overflow: hidden;
   scroll-behavior: smooth;
   -ms-scroll-chaining: none;
   overscroll-behavior: none;
 }
 
 body {
-  overflow: hidden;
   -ms-scroll-chaining: none;
   overscroll-behavior: none;
   padding: 0;
@@ -76,4 +74,8 @@ body {
 
 .bg-black-800 {
   background-color: var(--black-800);
+}
+
+.min-dvh-100 {
+  min-height: 100dvh;
 }

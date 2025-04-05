@@ -8,12 +8,14 @@
   font-style: normal;
 }
 
-$primary: #ffcb22;
-
 @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 :root {
   --primary-color: #ffcb22;
+
+  // Shades
+  --primary-color-darker-100: #dba91c;
+
   --black-800: rgba(26, 26, 26, 0.85);
 }
 
@@ -64,6 +66,10 @@ body {
 
 .bg-primary {
   background-color: var(--primary-color) !important;
+}
+
+.bg-primary-dark-100 {
+  background-color: var(--primary-color-darker-100);
 }
 
 .bg-black-800 {

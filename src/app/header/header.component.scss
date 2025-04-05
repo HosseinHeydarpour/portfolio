@@ -1,4 +1,5 @@
 :host {
+  position: relative;
   @media only screen and (min-width: 62rem) {
     width: 6.1875rem;
     height: 100%;
@@ -18,6 +19,7 @@
   left: 0;
   background-color: rgba(26, 26, 26, 0.85);
   z-index: 15;
+  position: relative;
 
   @media only screen and (min-width: 62rem) {
     top: unset;

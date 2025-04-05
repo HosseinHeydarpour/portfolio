@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@font-face {
+  font-family: "clesmont";
+  src: url("../public/fonts/clesmont-clesmont-regular-400.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 $primary: #ffcb22;
 

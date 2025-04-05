@@ -24,6 +24,7 @@
     "@ng-icons/core": "^31.2.0",
     "@ng-icons/feather-icons": "^31.2.0",
     "@ng-icons/font-awesome": "^31.2.0",
+    "@ng-icons/lucide": "^31.2.0",
     "bootstrap": "^5.3.5",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",

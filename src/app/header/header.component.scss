@@ -1,9 +1,22 @@
+:host {
+  @media only screen and (min-width: 62rem) {
+    flex: 1;
+  }
+}
+
 .navigation {
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(26, 26, 26, 0.85);
-  -webkit-backdrop-filter: blur(1rem);
+  z-index: 15;
+
+  @media only screen and (min-width: 62rem) {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+
   backdrop-filter: blur(1rem);
   border: solid 0.1rem rgba(44, 44, 44, 0.2);
   border-radius: 0 0 1rem 1rem;
@@ -44,7 +57,7 @@
         display: block;
         width: 100%;
         height: 0.125rem;
-        background: #e0e0e0;
+        background: var(--gray-100);
         border-radius: 0.2rem;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -57,7 +70,7 @@
           display: block;
           width: 70%;
           height: 0.125rem;
-          background: #e0e0e0;
+          background: var(--gray-100);
           border-radius: 0.2rem;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -72,7 +85,7 @@
           display: block;
           width: 100%;
           height: 0.125rem;
-          background: #e0e0e0;
+          background: var(--gray-100);
           border-radius: 0.2rem;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -107,5 +120,62 @@
     justify-content: center;
     -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
     transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+  }
+
+  &__menu {
+    &--mobile {
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      padding: 0;
+      position: sticky;
+      height: 100dvh;
+      width: 100dvw;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      list-style: none;
+      gap: 1.125rem;
+
+      transform: translateY(1.5rem) scale(0.9);
+      transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+      }
+
+      a {
+        font-family: "clesmont", sans-serif;
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--gray-100);
+        position: relative;
+        display: flex;
+        font-weight: bold;
+        letter-spacing: 2px;
+        align-items: center;
+
+        &.active {
+          color: var(--primary-color-darker-100);
+
+          &::after {
+            content: "(current)";
+            margin-left: 0.6rem;
+            opacity: 0.3;
+            font-weight: 300;
+            color: #a5a5a5;
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
   }
 }

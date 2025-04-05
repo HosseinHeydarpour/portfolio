@@ -12,6 +12,11 @@ $primary: #ffcb22;
 
 @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 
+:root {
+  --primary-color: #ffcb22;
+  --black-800: rgba(26, 26, 26, 0.85);
+}
+
 *,
 *:before,
 *:after {

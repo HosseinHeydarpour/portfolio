@@ -111,24 +111,6 @@
   }
 
   &__logo {
-    @media only screen and (min-width: 62rem) {
-      height: 6.1875rem;
-      width: 6.1875rem;
-      border-radius: 0.6rem;
-      font-family: "clesmont", sans-serif;
-      color: #121212;
-      font-size: 1.25rem;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
-      margin-bottom: 16px;
-    }
-
     &--mobile {
       height: 3.3rem;
       width: 5rem;
@@ -151,6 +133,26 @@
       justify-content: center;
       -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
       transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+    }
+
+    &--desktop {
+      @media only screen and (min-width: 62rem) {
+        height: 6.1875rem;
+        width: 6.1875rem;
+        border-radius: 0.6rem;
+        font-family: "clesmont", sans-serif;
+        color: #121212;
+        font-size: 1.25rem;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+        margin-bottom: 16px;
+      }
     }
   }
 

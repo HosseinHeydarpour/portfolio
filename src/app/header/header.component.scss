@@ -1,20 +1,30 @@
 :host {
   @media only screen and (min-width: 62rem) {
+    width: 6.1875rem;
+    height: 100%;
+    display: flex;
     flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
   }
 }
 
 .navigation {
-  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(26, 26, 26, 0.85);
   z-index: 15;
 
   @media only screen and (min-width: 62rem) {
-    position: relative;
     top: unset;
     left: unset;
+
+    width: 6.1875rem;
+    height: 100%;
+    flex: 1;
+    border-radius: 1rem;
   }
 
   backdrop-filter: blur(1rem);
@@ -99,27 +109,47 @@
   }
 
   &__logo {
-    height: 3.3rem;
-    width: 5rem;
-    margin-top: 0.8rem;
-    margin-left: 0.8rem;
-    margin-bottom: 0.8rem;
+    @media only screen and (min-width: 62rem) {
+      height: 6.1875rem;
+      width: 6.1875rem;
+      border-radius: 0.6rem;
+      font-family: "clesmont", sans-serif;
+      color: #121212;
+      font-size: 1.25rem;
 
-    border-radius: 0.6rem;
-    font-family: "clesmont", sans-serif;
-    color: #121212;
-    font-size: 1.25rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
-    transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+      margin-bottom: 16px;
+    }
+
+    &--mobile {
+      height: 3.3rem;
+      width: 5rem;
+      margin-top: 0.8rem;
+      margin-left: 0.8rem;
+      margin-bottom: 0.8rem;
+
+      border-radius: 0.6rem;
+      font-family: "clesmont", sans-serif;
+      color: #121212;
+      font-size: 1.25rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+      transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+    }
   }
 
   &__menu {

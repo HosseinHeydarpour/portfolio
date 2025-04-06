@@ -5,6 +5,7 @@ import {
   lucidePalette,
   lucideMail,
   lucideBookMarked,
+  lucideFileDown,
 } from '@ng-icons/lucide';
 
 @Component({
@@ -12,7 +13,13 @@ import {
   standalone: true,
   imports: [NgIcon],
   viewProviders: [
-    provideIcons({ lucideHouse, lucidePalette, lucideMail, lucideBookMarked }),
+    provideIcons({
+      lucideHouse,
+      lucidePalette,
+      lucideMail,
+      lucideBookMarked,
+      lucideFileDown,
+    }),
   ], // Add the icon to the provider
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],

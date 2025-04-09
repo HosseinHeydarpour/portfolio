@@ -1,7 +1,14 @@
+<div
+  class="logo navigation__logo navigation__logo--desktop bg-primary-dark-100 d-none d-lg-flex"
+>
+  <span>HH</span>
+</div>
 <nav
   class="bg-black-800 d-flex justify-content-between align-items-center navigation bg-black-800"
 >
-  <div class="logo navigation__logo bg-primary-dark-100">
+  <div
+    class="logo navigation__logo navigation__logo--mobile bg-primary-dark-100 d-lg-none"
+  >
     <span>HH</span>
   </div>
 
@@ -12,4 +19,25 @@
   >
     <span></span>
   </div>
+
+  <ul
+    class="navigation__menu navigation__menu--desktop p-0 d-none d-lg-flex flex-lg-column list-unstyled mx-auto gap-5"
+  >
+    @for (item of navigationItems; track navigationItems.length) {
+    <li>
+      <a href="" class="">
+        <ng-icon [name]="item.icon"></ng-icon>
+        <span>{{ item.title }}</span>
+      </a>
+    </li>
+    }
+  </ul>
 </nav>
+<ul
+  class="d-lg-none navigation__menu--mobile"
+  [class.active]="isMobileMenuActive()"
+>
+  <li *ngFor="let item of navigationItems">
+    <a href="">{{ item.title }}</a>
+  </li>
+</ul>

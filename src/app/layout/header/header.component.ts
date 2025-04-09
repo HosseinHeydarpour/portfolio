@@ -7,11 +7,13 @@ import {
   lucideBookMarked,
   lucideFileDown,
 } from '@ng-icons/lucide';
+import { Navigation } from './navigation.model';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIcon],
+  imports: [NgIcon, NgFor],
   viewProviders: [
     provideIcons({
       lucideHouse,
@@ -26,7 +28,33 @@ import {
 })
 export class HeaderComponent {
   isMobileMenuActive = signal<boolean>(false);
-
+  navigationItems: Navigation[] = [
+    {
+      title: 'Home',
+      route: '/',
+      icon: 'lucideHouse',
+    },
+    {
+      title: 'Portfolio',
+      route: '/portfolio',
+      icon: 'lucidePalette',
+    },
+    {
+      title: 'Contact',
+      route: '/contact',
+      icon: 'lucideMail',
+    },
+    {
+      title: 'Blog',
+      route: '/blog',
+      icon: 'lucideBookMarked',
+    },
+    {
+      title: 'Download CV',
+      route: '/cv',
+      icon: 'lucideDownload',
+    },
+  ];
   onMobileMenuBtnClicked() {
     this.isMobileMenuActive.set(!this.isMobileMenuActive());
   }
